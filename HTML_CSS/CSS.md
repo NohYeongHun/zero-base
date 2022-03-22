@@ -1,7 +1,10 @@
 ## CSS란?
 > HTML와 같이 CSS는 실제로 프로그래밍 언어는 아닙니다.
+>
 > 마크업(markup) 언어도 아닙니다. Style Sheet 언어입니다.
+>
 > HTML 문서에 있는 요소들에 선택적으로 스타일을 적용할 수 있다는 말입니다.
+>
 > 예시로 HTML 페이지에서 모든 문단 요소들을 선택하고 그 문단 요소들 안에 있는 텍스트를 빨갛게 바꾸려고 한다면 다음과 같이 CSS를 작성할 것입니다. 
 
 ## CSS 문법
@@ -101,10 +104,15 @@ content : 100px;
 ### 단축속성 (글꼴 속성)
 
 > font-style: italic;
+>
 > font-weight: bold;
+>
 > font-size: .8em;
+>
 > line-height: 1.2;
+>
 > font-family: Arial, sans-serif;
+>
 
 ### 단축속성 (테두리 속성)
 
@@ -119,8 +127,11 @@ content : 100px;
 ### 단축속성 (배경 속성)
 
 > background-color: #000;
+>
 > background-image: url(images/bg.gif);
+>
 > background-repeat: no-repeat;
+>
 > background-position: top right;
 
 다음과 같이 선언 단 하나를 사용해서 단축할 수 있습니다.
@@ -130,14 +141,23 @@ content : 100px;
 
 많이 쓰는 Emmet 예제 
 > mt10 => margin-top: 10px;
+>
 > pb10 => padding-bottom: 10px;
+>
 > w100 => width: 100px;
+>
 > h100p => hegiht: 100%;
+>
 > bd => border: 1px solid #000;
+>
 > bgc => background-color: #fff;
+>
 > fsz10 => font-size: 10px;
+>
 > fw700 => font-weight: 700;
+>
 > c#ddd => color: #ddd;
+>
 > z10 => z-index: 10;
 [cheat-sheat]https://docs.emmet.io/cheat-sheet/
 
