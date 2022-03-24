@@ -57,3 +57,27 @@ if (number == 0){
 }else{
     console.log('number는 0이 아닙니다.'); // False
 }
+
+const word = '문자';
+const word2 = "문자";
+const word3 = `문자`;
+const words = word + ' ' + word2
+
+console.log(word == word3);
+console.log(words);
+console.log(words.length);
+
+const data ='a';
+const numb = 0
+const boolean = true
+
+const array = [data, numb, boolean, 'name'];
+console.log(
+    array.length // 4
+);
+console.log(typeof array) // object;
+console.log(array[0]);
+array.push('string')
+console.log(array);
+array.unshift('first');
+console.log(array);
