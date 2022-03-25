@@ -118,6 +118,24 @@ console.log(null === undefined); // false
 ```
 
 ### boolean
+> 논리적인 흐름을 제어할때 사용하는 데이터 타입
+>
+> 프로그램 구현시에 상당히 많은 데이터 타입이 발생할 수 있는데 이를 통한 논리적인 코드 흐름을 만들어 내기 위해서는 거의 필수적으로 사용되어지는 데이터 타입이다.
+```js
+/**
+ * - Boolean
+ * ON: True
+ * OFF: False
+ */
+
+console.log(Boolean('STRING')) // true
+
+if (식) {
+    // true이면 사용..
+}else if(식){
+    // if false, true이면 사용
+}
+```
 ### number
 ### string
 ### symbol
