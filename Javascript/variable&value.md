@@ -1,3 +1,13 @@
+## 목차
+
+1. [선언과 할당](#변수의-선언과-할당)
+2. [값](#값value)
+3. [자료형](#자료형-data-type)
+4. [원시값](#원시-값primitive-value)
+5. [객체](#객체objects)
+6. [비교](#느슨한비교-엄격한-비교)
+7. [참조](#reference)
+
 ## 변수의 선언과 할당
 
 ### 선언과 할당 예시.
@@ -88,7 +98,7 @@ console.log(typeof obj); // object
 console.log(typeof arr); // object
 console.log(typeof func); // function
 ```
-### 느슨한비교, 엄격한 비교 
+## 느슨한비교, 엄격한 비교 
 
 ```js
 const number = '0';
