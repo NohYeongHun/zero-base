@@ -69,7 +69,41 @@
 > `expr1 || expr2 ` 논리 OR 연산자
 >
 > `!expr` 논리 NOT 연산자
+```js
+/**
+ * - Logical Operator (논리 연산자) 
+ * OR - || (또는)
+ * AND - && (그리고)
+ * NOT - ! (부정)
+ * 
+ */
 
+console.log(true && true) // true
+console.log(false && true ) // false
+console.log(false || false) // false
+
+const age = 20;
+const genderType ='GIRL';
+
+const isAdult = age > 19; // true
+const isGirl = genderType === 'GIRL';
+
+if (isAdult && isGirl){ // true
+    console.log('나는 성인이고 여자다');
+}
+
+function getName(firstName, lastName){
+    const fName = firstName === undefined ? '성 없음' : firstName;
+    // 삼항 연산자 firstName이 존재하면 firstName을 반환 아니면 '성 없음'을 반환
+    const lName = lastName === undefined ? '이름 없음' : lastName;
+    
+    return '저는 ' + fName + '   ' + lName + '입니다';
+}
+
+console.log(getName('노', ));
+// 저는 노 이름 없음 입니다.
+
+```
 ### 문자열 연산자
 ```js
 console.log('mine' +' ' + 'string'); // mine string
