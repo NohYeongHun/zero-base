@@ -123,6 +123,30 @@ var o = {a, b, c};
 var o = { a: a, b: b, c: c };
 ```
 
+## 값&식&문
+
+### 값
+> 하나의 값
+
+### 식 or 표현식
+> 값을 생성
+>
+> 값으로 귀결
+
+### 문(Statement)
+> 행동을한다
+>
+> 흐름을 제어한다.
+
+```js
+123 // 값
+1 + 1 // 식
+
+{
+
+} // 문
+```
+
 ## Reference
 [MDN-어휘문법]https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar
 [Javascript-입문]https://developer.mozilla.org/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript
