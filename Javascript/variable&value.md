@@ -7,7 +7,8 @@
 5. [객체](#객체objects)
 6. [비교](#느슨한비교-엄격한-비교)
 7. [타입변환](#타입-변환)
-8. [참조](#reference)
+8. [Truethy&Falsy](#truethy--falsy)
+9. [참조](#reference)
 
 ## 변수의 선언과 할당
 
@@ -298,7 +299,50 @@ const result3 = Number('5') * 3
 const result4 = Number(String(['111'])) + 111
 ```
 
+## Truethy & Falsy
+> 참 같은 & 거짓 같은.
+>
+> 참 같은 값`(Truthy)`인 값이란 불리언을 기대하는 문맥에서 `true`로 평가되는 값
+>
+> 거짓 같은 값`(Falsy)`인 값이란 불리언을 기대하는 문맥에서 `false`로 평가되는 값
+```js
+/* 
+    Truethy
+*/
+if (true)
+if ({})
+if ([])
+if (42)
+if ("0")
+if ("false")
+if (new Date())
+if (-42)
+if (12n)
+if (3.14)
+if (-3.14)
+if (Infinity)
+if (-Infinity)
+
+/*
+    Falsy
+*/
+if (false)
+if (null)
+if (undefined)
+if (0)
+if (-0)
+if (0n)
+if (NaN)
+if ("")
+
+false && "dog"
+// ↪ false
+
+0 && "dog"
+// ↪ 0
+
+```
 
 ## Reference
-[MDN]https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types
-
+- [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [MDN-Truethy](https://developer.mozilla.org/ko/docs/Glossary/Truthy)
