@@ -100,9 +100,20 @@ function getName(firstName, lastName){
     return '저는 ' + fName + '   ' + lName + '입니다';
 }
 
-console.log(getName('노', ));
-// 저는 노 이름 없음 입니다.
+function getName2(firstName, lastName){
+    const fName = firstName || '성 없음';
+    const lName = lastName || '이름 없음';
+    
+    return '저는 ' + fName + '   ' + lName + '입니다';
+}
 
+console.log(getName('노', )); 
+/* 
+    저는 노 이름 없음 입니다. 
+    firstName은 값이 있으므로 true이고 바로 해당 값이 반환되어진다.
+    lastName은 값이 정의된적이 없으므로 undefined인데 이것은 false로 취급되어진다.
+    => 그래서 값이 없으므로 연산자가 true를 찾으러 '이름 없음' 으로 이동하고 반환되어진다.
+*/
 ```
 ### 문자열 연산자
 ```js
