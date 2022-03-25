@@ -6,7 +6,8 @@
 4. [원시값](#원시-값primitive-value)
 5. [객체](#객체objects)
 6. [비교](#느슨한비교-엄격한-비교)
-7. [참조](#reference)
+7. [타입변환](#타입-변환)
+8. [참조](#reference)
 
 ## 변수의 선언과 할당
 
@@ -239,6 +240,44 @@ if (number == 0){
 }else{
     console.log('number는 0이 아닙니다.');
 }
+```
+
+## 타입 변환
+> 타입 변환은 암시적 & 명시적 변환이 있다.
+>
+> 형 변환은 명시적으로 하는 것이 예측 가능한 코드를 생성 가능하다.
+
+### 암시적 형변환
+> 연산이 어떻게 진행될지 정확하게 예측하기 힘들다.
+```js
+const result = 1 + '입니다' // 1입니다.
+
+console.log(typeof result1) 
+// string
+
+const result2 = '11' + 11 // 1111
+
+console.log(typeof result2)
+// string
+
+const result3 = '2' * '2' // 4
+
+console.log(typeof result3)
+// number
+```
+
+### 명시적 형변환
+> 연산이 어떻게 진행될지 정확하게 예측 할 수있다.
+>
+> 예측 가능한 코드를 만들기 위해서 형 변환을 명시적으로 수행해야한다.
+```js
+const result1 = String(1) + '입니다'
+
+const result2 = Number('11') + 11
+
+const result3 = Number('5') * 3
+
+const result4 = Number(String(['111'])) + 111
 ```
 
 
