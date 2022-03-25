@@ -93,13 +93,34 @@ test = test.toUpperCase(); // 재할당 STRING
 console.log(test); // STRING
 ```
 
-1. null
-2. undefined
-3. boolean
-4. number
-5. string
-6. symbol
-7. bigint
+### null
+> 변수에 `빈 값`을 임의로 지정
+
+```js
+const initValue = null; // null을 지정
+
+console.log(!null); // true
+console.log(!!null); // false
+console.log(Number(null)); // 0
+```
+
+### undefined
+> 변수를 `선언`만 하고 `정의`하지 않은 것.
+
+```js
+variable // undefined
+
+console.log(!undefined); // true
+console.log(!!undefined); // false
+console.log(Number(undefined)); // NaN => Not a Number
+console.log(null === undefined); // false
+```
+
+### boolean
+### number
+### string
+### symbol
+### bigint
 
 ```js
 const un = undefined;
