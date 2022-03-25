@@ -27,6 +27,23 @@ function comment() {
 comment();
 ```
 
+3. `JS DOC`
+> 협업시 사용하면 좋은 주석 방법.
+>
+> 자세한 설명이 있는 대신 작성 시 소요시간이 길다.
+```js
+/**
+ * @constructor
+ * 
+ * @param {string} title - The titile of the book.
+ * @param {string} author - The author ot the book.
+ */
+function Book(title, author){
+  // logic..
+}
+ 
+```
+
 ## 리터럴
 > 스크립트에 부여한 고정값, 변수가 아님.
 
