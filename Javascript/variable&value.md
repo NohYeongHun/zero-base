@@ -117,12 +117,20 @@ console.log(typeof string); // string
 
 ## 객체(Objects)
 > 원시 값이 아닌 데이터 값
+>
+> 객체 타입은 메모리 주소의 집합이다.
+>
+> 객체 타입에서 내부 변수의 이름은 메모리 주소의 별칭이다.
 
 ```js
 // 객체 타입
-const obj ={
-    name: 'jang',
-}
+const obj = {
+    name: 'jang', // 메모리 주소의 별칭 name
+    age: 00, // 메모리 주소의 별칭 age
+    arr: [], // 메모리 주소의 별칭 arr
+    func1: function() {}, // 메모리 주소의 별칭 func1
+    child: {} // 메모리 주소의 별칭 child
+};
 
 // 객체 타입
 const arr = ['jang'];
@@ -139,6 +147,37 @@ console.log(typeof func); // function
 console.log(obj instanceof Object); // True
 console.log(func instanceof Function); // True
 console.log(arr instanceof Array); // True
+
+const test ={
+    str: 'string'
+}
+
+test.str.toUpperCase();
+/* 
+    {str: 'string'}
+    => 왜그럴까? test는 객체 타입이지만 내부의 str은 Primitive Type이므로 변경되지 않는다.
+*/
+console.log(test); 
+
+
+test.num = 123
+test.bool = true
+
+/* 
+    {str:'string', num:123, bool: true}
+    왜그럴 까?
+    test는 Objects 타입이므로 불변하지 않는다.
+    그래서 새로운 값을 넣는 것이 용인된다.
+*/
+console.log(test); 
+
+const arr = [1,2,3];
+console.log(arr[0]); // 1
+console.log(arr[1]); // 2
+console.log(arr[2]); // 3
+
+arr[3] = 1000; // arr = [1, 2, 3, 1000]
+
 ```
 ## 느슨한비교, 엄격한 비교 
 
