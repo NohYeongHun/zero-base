@@ -122,6 +122,30 @@ console.log(null === undefined); // false
 ### symbol
 ### bigint
 
+### 원시값의 래퍼 객체
+
+```js
+const bool = false;
+const num = 123;
+const str = 'string';
+
+const bool2 = new Boolean(false)
+const num2 = new Number(123)
+const str2 = new String('string')
+
+console.log('string' instanceof String) // false 
+
+console.log(str.toUpperCase()) 
+/* 
+    => STRING
+    str은 Primitive Type인데 어떻게 toUpperCase가 동작되어 질까?
+    str이 선언하고 정의되어 졌을때 내부적으로 동작은 다음과 같다.
+    1. const str = new String('string');
+    2. `new String('string')` 해당 임시객체가 삭제된다.
+    3. const str = `string`; 으로
+*/
+```
+
 ```js
 const un = undefined;
 const nu = null;
@@ -169,7 +193,7 @@ console.log(obj instanceof Object); // True
 console.log(func instanceof Function); // True
 console.log(arr instanceof Array); // True
 
-const test ={
+const test = {
     str: 'string'
 }
 
