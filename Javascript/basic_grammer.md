@@ -52,6 +52,16 @@ function Book(title, author){
 
 ## 리터럴
 > 스크립트에 부여한 고정값, 변수가 아님.
+>
+> 리터럴을 이용하여 자바스크립트의 값을 편하게 만들어 낼 수 있음.
+
+```js
+const string = 'jang'// 'jang' == (리터럴)
+=> // const string = new String('jang')
+
+const arr = [1,2,3] 
+=> // new Array(1,2,3)
+```
 
 ### Null 리터럴
 ```js
