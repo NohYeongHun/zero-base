@@ -56,12 +56,50 @@ var str = 'string'
 str.toUpperCase();
 ```
 
+### 동적 타이핑
+> 자바스크립트는 느슨한 타입언어, 혹은 동적언어이다.
+>
+> 변수의 타입을 미리 선언할 필요가 없다는 뜻. 타입은 프로그램이 처리되는 과정에서 자동으로 파악된다.
+>
+> 이 말은 같은 변수에 여러 타입의 값을 넣을 수 있다는 뜻과 동일하다.
+```js
+var foo = 42; // type of foo => Number
+var foo = 'bar'; // type of foo => String
+var foo = true; // typeof foo => Boolean
+```
+
 ## 원시 값(Primitive Value)
 > 객체를 제외한 모든 타입은 불변 값(변경할 수 없는 값)을 정의합니다. 
 >
 > 예를 들어 (C 언어와는 달리) 문자열은 불변합니다.
 >
 > 이런 일련의 타입을 "원시 값"이라고 합니다.
+>
+> 원시 값에서 불변의 의미는 원시값을 변조하는 함수를 사용하였을 때 원시 값은 불변하므로 변하지 않는다는 뜻이다.
+>
+> 해당 원시 값을 변하게 하고 싶으면 `재할당` 해야한다.
+
+```js
+/* 불변의 예시 */
+const test = 'string'; // string
+console.log(test.toUpperCase()); // STRING
+
+console.log(test); // string
+
+/* 값을 변경하고 싶다면? */
+let test = 'string'; // string
+test = test.toUpperCase(); // 재할당 STRING
+
+console.log(test); // STRING
+```
+
+1. null
+2. undefined
+3. boolean
+4. number
+5. string
+6. symbol
+7. bigint
 
 ```js
 const un = undefined;
@@ -97,6 +135,10 @@ function func(){
 console.log(typeof obj); // object
 console.log(typeof arr); // object
 console.log(typeof func); // function
+
+console.log(obj instanceof Object); // True
+console.log(func instanceof Function); // True
+console.log(arr instanceof Array); // True
 ```
 ## 느슨한비교, 엄격한 비교 
 
@@ -118,3 +160,4 @@ if (number == 0){
 
 ## Reference
 [MDN]https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types
+
