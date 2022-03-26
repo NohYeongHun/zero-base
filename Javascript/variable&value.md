@@ -156,12 +156,18 @@ Number(3.141592) // 3.141592
 ```
 
 > `NaN`
+>
+> Not a Number 검사 시에는 `Number.isNaN `메소드를 이용하자
 ```js
 /**
  * 
  * Not A Number => 숫자가 아니다
  * - NaN
  * - Number.NaN
+ * 숫자로 읽어낼 수 없다.
+ * 잘못된 계산 결과식
+ * 정의할 수 없는 결과식
+ * 문자열이 포함된 계산식 (덧셈 제외)
  */
 
 Number(undefined); // NaN
@@ -169,6 +175,16 @@ parseInt('숫자로 변환 불가능한 문자열'); // NaN
 Math.log(-1); // NaN
 10 + NaN; // NaN
 "가나다라" / 10; // NaN
+
+// 느슨한 검사
+isNaN(undefined); // true
+isNaN({}); // true
+isNaN({}); // true
+
+// ES2015+ (엄격한 검사)
+Number.isNaN(undefined) // false
+Number.isNaN({}) // false
+Number.isNaN('문자열') // false
 ```
 
 > `Infinity`
