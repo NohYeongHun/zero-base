@@ -138,9 +138,116 @@ if (식) {
 }
 ```
 ### number
+> 숫자 리터럴
+```js
+const num = 123 // Literal
+new Number(123) // refer Object
+```
+
+> 숫자로 명시적 형 변환
+```js
+Number(undefined) // NaN
+Number(null) // 0
+Number('') // 0
+Number('String') // NaN
+Number(true) // 1
+Number(false) // 0
+Number(3.141592) // 3.141592
+```
+
+> `NaN`
+```js
+/**
+ * 
+ * Not A Number => 숫자가 아니다
+ * - NaN
+ * - Number.NaN
+ */
+
+Number(undefined); // NaN
+parseInt('숫자로 변환 불가능한 문자열'); // NaN
+Math.log(-1); // NaN
+10 + NaN; // NaN
+"가나다라" / 10; // NaN
+```
+
+> `Infinity`
+```js
+/**
+ * 
+ * Infinity
+ * 너무 크거나 작다
+ * 지수 1023까지만 허용
+ */
+const result = isFinite(Math.pow(2,1024)); // Infinity
+7 / 0 ; // Infinity
+
+console.log(isFinite(result)) // false;
+console.log(isFinite(NaN)) // false;
+console.log(isFinite(19)) // true;
+```
+
+> 정수
+```js
+/**
+ * 정수 (Integer)
+ * - 자바 스크립트에는 부동소수점(IEEE-754) 숫자만 존재
+ * - 정수를 저장하는 2가지 방법
+ * 1. 10진 소수가 없는 작은 숫자는 정수로 오래 유지(예시 : 31비트)
+ * 2. 비트 연산자를 이용 32비트 정수로 바꿔 반환
+*/
+
+// 안전한 정수의 최댓값
+Number.MAX_SAFE_INTEGER
+// 안전한 정수의 최소값
+Number.MIN_SAFE_INTEGER
+
+// 소수점을 다루는 방법.
+Math.floor(4) //4 : 가장 가까운 정수로 내림
+Math.ceil(4.2) // 5 : 가장 가까운 정수로 올림
+Math.round(4.2) // 4 : 가장 가까운 정수로 반올림
+
+parseInt('10', 10); // '10'을 정수로 변환
+Number('10'); // '10'을 숫자로 변환
+
+/* 
+    parseInt의 대략적인 구조
+    value = 정수로 변환할 'string' 값
+    radix = 2 ~ 36 사이의 진수 값 
+*/
+function parseInt(value, radix){
+    if (radix === undefined){
+        return Number(value)
+    }
+    else{
+        ...//radix에 따른 진수 변환
+    }
+}
+```
+
 ### string
 ### symbol
 ### bigint
+> 원시 값이 안정적으로 나타낼 수 있는 최대치인 $2^{53}-1 보다 큰 정수를 표현할 수 있는 내장 객체$
+```js
+console.log(Number.MAX_VALUE); // Javascript가 표현할 수 있는 제일 큰 양의 숫자 값.
+Number.MAX_SAFE_INTEGER
+
+const big_num = 123123123123123213213213213123123123123
+console.log(123123123123123n) // BigInt 타입
+console.log(Bigint(big_num)); // 자바스크립트에서 사용 시 굉장히 큰 숫자들도 축약 없이 보여준다.
+
+console.log(0n === 0) 
+/* 
+    false
+    strict한 검사에서는 false가 나온다.
+*/
+console.log(0n == 0)
+/*
+    true
+    unstrict한 검사에서는 true가 나온다.
+*/
+```
 
 ### 원시값의 래퍼 객체
 
