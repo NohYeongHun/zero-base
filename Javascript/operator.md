@@ -156,6 +156,7 @@ typeof size;      // "number" 반환
 typeof foo;       // "object" 반환
 typeof today;     // "object" 반환
 typeof dontExist; // "undefined" 반환
+typeof null; // "object" ?? => JS 초기 설계 오류
 
 void (expression)
 void expression
