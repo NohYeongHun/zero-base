@@ -242,6 +242,62 @@ function parseInt(value, radix){
 ```
 
 ### string
+> 예제
+```js
+const singleQuote = '';
+const singleQuote = "";
+const multiLine ='1\
+2\
+5\
+3';
+
+// ES2015+
+const singleQuote = ``;
+const backQuoteMultiLine = `1
+2
+3
+4
+5
+`;
+
+const str = 'ABC'; // 배열처럼 접근 가능.
+str.charAt(2); // 'C'
+
+const multiString = `dog barked dog`
+const searchTerm = 'dog';
+multiString.includes(searchTerm); // 포함여부
+multiString.indexOf(saerchTerm); // 인덱스 확인
+
+['HE','LLOW','ORLD'].join(''); // HELLOWORLD
+const helloWorld = 'HELLO WORLD';
+[...helloWorld]; // ['H','E','L','L','O',' ','W','O','R','L','D']
+```
+
+> 템플릿 리터럴
+```js
+/**
+ * Template Literals
+ * 1. 멀티라인 (개행)이 자유로움
+ * 2. Basic String Formatting => 보간법을 활용 => 표현식을 문자열 포함
+ * 3. HTML Escaping : 안전하게 사용하도록 도움 (XSS, SQL Injection)
+ * 
+ */
+
+function genHello(name){
+    return `안녕하세요
+    ${name}님
+    반갑습니다.
+    `
+}
+
+function genDivision(innerText){
+    return `<div>${innerText}</div>`
+}
+
+const divTag = genDivision('Jang');
+body.innerHTML = divTag;
+```
+
 ### symbol
 ### bigint
 > 원시 값이 안정적으로 나타낼 수 있는 최대치인 $2^{53}-1 보다 큰 정수를 표현할 수 있는 내장 객체$
