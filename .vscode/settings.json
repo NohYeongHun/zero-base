@@ -1,0 +1,8 @@
+{
+    // Java package Path
+    "java.project.sourcePaths": [
+        "Java/JavaDataType",
+        "Java/JavaExampleCode",
+        "Java/JavaOperator"
+    ]
+}
