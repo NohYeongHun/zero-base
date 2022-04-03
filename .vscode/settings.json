@@ -3,6 +3,7 @@
     "java.project.sourcePaths": [
         "Java/JavaDataType",
         "Java/JavaExampleCode",
-        "Java/JavaOperator"
+        "Java/JavaOperator",
+        "Java",
     ]
 }
