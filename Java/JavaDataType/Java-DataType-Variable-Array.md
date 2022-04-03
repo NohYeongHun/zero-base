@@ -265,6 +265,13 @@ Convention
 멤버 변수에서 선언을 하였을 경우에는 타입의 기본값으로 초기화가 되고,
 지역 변수에서 선언을 하였을 경우에는 아무런 값도 들어있지 않다.
 '''
+/*
+ * static : 키워드
+ * String : 자료형
+ * userName : 식별자
+*/
+
+static String userName = "홍길동";
 
 public class Test{
 
