@@ -130,3 +130,5 @@ console.log(0.1 + 0.2 === 0.3 ) // False => 왜?...
 > 전체 표현
 >
 > $00111101 11001100 11001100 11001101_{2}$
+
+[IEE754방식을이용한0.1변환](https://binary-system.base-conversion.ro/real-number-converted-from-decimal-system-to-32bit-single-precision-IEEE754-binary-floating-point.php?decimal_number_base_ten=0.1)
