@@ -49,5 +49,14 @@ public class Variable{
         // 사용 X
         int my_age = 10;
         int one_apple_price = 1000;
+
+        // long, double
+        int i1 = 10;
+        long l1 = 0XFFFFFFFFFFFFFFFL;
+        long l2 = 20L;
+        double d1 = 3.1D;
+        System.out.println("long형 : " + l1);
+        System.out.println("double형 : " + d1);
+
     }
 }
