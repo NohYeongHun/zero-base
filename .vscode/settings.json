@@ -1,0 +1,6 @@
+{
+    // Java package Path
+    "java.project.sourcePaths": [
+        "BasicMath",
+    ]
+}
