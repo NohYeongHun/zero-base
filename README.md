@@ -14,6 +14,7 @@
 - [논리 연산](ComputerArchitecture/논리연산.md)
 - [비트 표현](ComputerArchitecture/비트표현.md)
 - [가산기](ComputerArchitecture/가산기.md)
+- [메모리](ComputerArchitecture/메모리.md)
 
 
 ### 운영 체제
