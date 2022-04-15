@@ -16,7 +16,7 @@
 - [가산기](ComputerArchitecture/가산기.md)
 - [메모리](ComputerArchitecture/메모리.md)
 - [PC](ComputerArchitecture/PC.md)
-
+- [컴퓨터](ComputerArchitecture/Computer.md)
 
 ### 운영 체제
 
