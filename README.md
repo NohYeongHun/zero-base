@@ -15,6 +15,7 @@
 - [비트 표현](ComputerArchitecture/비트표현.md)
 - [가산기](ComputerArchitecture/가산기.md)
 - [메모리](ComputerArchitecture/메모리.md)
+- [PC](ComputerArchitecture/PC.md)
 
 
 ### 운영 체제
