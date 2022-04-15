@@ -33,7 +33,7 @@
 
 
 ### 비선형 자료구조
-- [트리]()
-- [그래프]()
-- [힙/우선순위큐]()
-- [트라이]
+- [트리](NonLinearDataStructure/트리.md)
+- [그래프](NonLinearDataStructure/그래프.md)
+- [힙/우선순위큐](NonLinearDataStructure/힙,우선순위큐.md)
+- [트라이](NonLinearDataStructure/트라이.md)
