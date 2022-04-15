@@ -47,6 +47,9 @@
     - 누산기(ACC, Accumulator): 데이터 일시 보관 레지스터
     - MAR(Memory Address Register): CPU가 메모리 참조위해 보관하는 데이터 주소를 가진 레지스터
     - MBR(Memory Buffer Register): CPU가 메모리로부터 읽거나 저장할 데이터 자체를 보관하는 레지스터
+    - 범용 레지스터(General Purpose Register): 작업 레지스터에서 DATA가 용이하게 처리되도록 임시로 자료를 저장하는 경우 산용
+    - 작업 레지스터(Working Register): 산술논리연산을 실행할 수 있도록 자료를 저장하고 그 결과를 저장(GPR과의 차이점은 ALU에 연결 되어있나?의 차이점이다.)
+    - 상태 레지스터(Status Register): CPU의 상태를 나타내는 특수목적의 레지스터 - 연산결과의 상태, 영 Z(Zero), 부호 S(Sign), 오버플로우 V(Overflow), 캐리 C(Carry), 인터럽트 I(Interrupt)
 
 ![](img/2022-04-15-15-44-14.png)
 
