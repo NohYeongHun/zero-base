@@ -2,5 +2,7 @@
     // Java package Path
     "java.project.sourcePaths": [
         "BasicMath",
-    ]
+    ],
+    "pasteImage.basePath": "${currentFileDir}\\img",
+    "pasteImage.path": "${currentFileDir}\\img"
 }
