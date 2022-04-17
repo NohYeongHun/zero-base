@@ -3,6 +3,8 @@
     "java.project.sourcePaths": [
         "BasicMath",
     ],
-    "pasteImage.basePath": "${currentFileDir}\\img",
-    "pasteImage.path": "${currentFileDir}\\img"
+    "pasteImage.basePath": "${currentFileDir}",
+    "pasteImage.path": "${currentFileDir}/img",
+    "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
+    "pasteImage.namePrefix": ""
 }
