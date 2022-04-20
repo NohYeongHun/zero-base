@@ -19,6 +19,7 @@
 - [컴퓨터](ComputerArchitecture/Computer.md)
 
 ### 운영 체제
+- [운영체제의 개념](OS/운영체제개념.md)
 
 ### 시스템 프로그래밍
 
