@@ -1,8 +1,8 @@
-package exam02.a2;
+package inheritanceExam.exam02.a2;
 
 import java.util.Calendar;
 
-import exam01.a1.SavingAccount;
+import inheritanceExam.exam01.a1.SavingAccount;
 
 public class SavingAccountCheck extends SavingAccount{
     

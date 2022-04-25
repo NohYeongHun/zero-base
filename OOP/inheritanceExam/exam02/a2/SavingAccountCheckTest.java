@@ -1,6 +1,6 @@
-package exam02.a2;
+package inheritanceExam.exam02.a2;
 
-import exam01.a1.Account;
+import inheritanceExam.exam01.a1.Account;
 
 public class SavingAccountCheckTest {
     // 같은 패키지 - > x

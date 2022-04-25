@@ -1,4 +1,4 @@
-package exam01.a1;
+package inheritanceExam.exam01.a1;
 
 import java.util.Calendar;
 
