@@ -21,14 +21,14 @@
 
 ![](img/2022-05-02-05-12-46.png)
 
-[exam](object/exam01/EqualSample.java)
+[Equals](object/exam01/EqualSample.java)
 
 ### hashCode()
 - 데이터관리기법인 해시기법에 사용되는 해시함수를 구현
 - 클래스의 인스턴스변수 값으로 객체의 같고 다름을 판단해야 하는 경우 equals메소드와 hashCode메소드를 같이 이용해서 비교
 
 ![](img/2022-05-02-05-27-54.png)
-[exam](object/exam01/HashSample.java)
+[HashCode](object/exam01/HashSample.java)
 
 ### toString()
 - 사용자 정의 클래스는 보통 오버라이딩 이후 적절한 내용으로 수정함
@@ -45,7 +45,38 @@
 
 ![](img/2022-05-02-05-29-50.png)
 
-[exam](object/exam01/ToStringSample.java)
+[ToString](object/exam01/ToStringSample.java)
 
 
+## String
 
+> String 클래스
+>
+> 자바에서 문자열을 처리하는 클래스
+
+### 메서드
+> 많다..
+
+- length
+- charAt
+- toCharArray
+- contains
+- indexOf
+- lastindexOf
+- toLowerCase
+- toUpperCase
+- trim
+- equals
+- equalsIgnoreCase
+- split
+- replace
+- replaceAll
+- concat
+- endsWith
+- startsWith
+- substring
+- toString
+- valueOf
+- compareTo
+
+[StringMethod](object/exam03/StringTest.java)
