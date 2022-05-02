@@ -38,6 +38,38 @@ public class StringTest {
         String trimTest = " hi ";
         System.out.println("prev trim() : " + trimTest);
         System.out.println("prev trim() : " + trimTest.trim());
+        
+        final String Furl = "https://Campus.co.kr";
+        if(url.equals(Furl)){
+            System.out.println("equals() 메서드는 대소문자 구분이 안 된다.");
+        }else{
+            System.out.println("equals() 메서드는 대소문자 구분이 된다.");
+        }
+
+        if(url.equalsIgnoreCase(Furl)){
+            System.out.println("equalsIgnoreCase() 메서드는 대소문자 구분을 무시한다.");
+        }else{
+            System.out.println("equalsIgnoreCase() 메서드는 대소문자 구분이 된다.");
+        }
+
+
+        String url2 = "http://naver.com/news/tv/sbs";
+        // name,  tv,  sbs
+        // 분류  매체 방송국
+        // new, radio, kbs
+
+        String[] url2List = url2.replace("http://naver.com/", "").split("/");
+        for(String url2Str : url2List){
+            System.out.print(url2Str + " ");
+        }
+        System.out.println();
+        System.out.println("분류 : " + url2List[0]);
+        System.out.println("매체 : " + url2List[1]);
+        System.out.println("방송국 : " + url2List[2]);
+
+        //concat() => 합치기
+        System.out.println(url2.concat("/index.html"));
+        System.out.println(url2 + "/index.html");
 
     }
 }
