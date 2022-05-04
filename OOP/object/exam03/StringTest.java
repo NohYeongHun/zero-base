@@ -71,5 +71,17 @@ public class StringTest {
         System.out.println(url2.concat("/index.html"));
         System.out.println(url2 + "/index.html");
 
+        //substring()
+
+        System.out.println(url.substring(8, 17));
+
+        //ValueOf()
+        String v1 = String.valueOf(12);
+        Integer n1 = Integer.valueOf(v1);
+        System.out.println(n1);
+
+        
+        
+
     }
 }

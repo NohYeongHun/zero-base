@@ -80,3 +80,9 @@
 - compareTo
 
 [StringMethod](object/exam03/StringTest.java)
+
+### 문자열 인코딩
+- 자바는 기본적으로 UTF-16을 사용
+- String.format
+
+![](img/2022-05-05-06-05-38.png)
