@@ -1,5 +1,6 @@
 ## 목차
 1. [StringBuffer, StringBuilder](#stringbuffer--stringbuilder)
+2. [Math](#math)
 
 ## StringBuffer / StringBuilder
 
@@ -32,3 +33,21 @@
 
 
 ### [Buffer, Builder 예제](classkinds/buffers/StringBufferTest.java)
+
+## Math
+- 수학계산 하는데 있어서 유용한 클래스
+- 소수점 처리 함수
+    - round : 반올림
+    - ceil : 올림
+    - floor : 버림
+
+- 스마트폰 앱에서 보통 위치기반으로 서비스를 진행
+    - 가까운 곳에 있는
+    - 내 근처에 있는
+
+- 평면좌표상에서 두 점 사이의 거리 공식
+![](img/2022-05-09-07-39-37.png)
+
+- 두 점 사이의 거리값을 구하는 메소드 구현
+
+### [Math 예제](classkinds/mathc/MathTest.java)
