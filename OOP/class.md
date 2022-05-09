@@ -81,5 +81,9 @@
 - 완전 새로운 시스템을 구축하지 않는 이상, Date 클래스는 사용 안할 수는 없음.
 - Calendar 클래스 이후, 대부분의 메서드는 Calendar에서 가져오고 Date는 저장 용도로만 사용
 
-## LocalDate, LocalTime, LocalDateTime
+### LocalDate, LocalTime, LocalDateTime
 - DateTimeFormatter(java.time.format)
+
+### Date To LocalDateTime, LocalDateTime to Date 변환
+
+![](img/2022-05-10-08-03-54.png)
