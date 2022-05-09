@@ -1,6 +1,7 @@
 ## 목차
 1. [StringBuffer, StringBuilder](#stringbuffer--stringbuilder)
 2. [Math](#math)
+3. [날짜 관련 클래스](#날짜-관련-클래스)
 
 ## StringBuffer / StringBuilder
 
@@ -51,3 +52,34 @@
 - 두 점 사이의 거리값을 구하는 메소드 구현
 
 ### [Math 예제](classkinds/mathc/MathTest.java)
+
+## 날짜 관련 클래스
+
+### 자료 형태에 따른 분류
+
+- 숫자
+    - 나이, 순번(ID), 조회수, 주문 건수
+
+- 문자열
+    - 이름, 학과, 제목, 내용
+
+- 불린
+    - 이메일 수신 여부, SMS 문자 수신 여부, 푸시 수신 여부
+
+- 날짜 / 시간
+    - 가입일, 주문일, 미팅 일자, 미팅 시간, 운동 시간
+
+- 바이너리
+    - 이미지 파일, 문서 파일
+
+### 날짜 및 시간 자료형 클래스
+- 날짜와 시간의 데이터를 처리하기 위해서 Date 클래스 이용
+- JDK 1.0부터 제공하는 클래스 -> 현재 대부분의 레거시 시스템 소스에 묻어 있음.
+- 이후 기능 추가한 Calendar 클래스 포함
+- JDK 1.8에 와서 java.time 패키지에 기존 기능 개선 클래스 추가
+
+- 완전 새로운 시스템을 구축하지 않는 이상, Date 클래스는 사용 안할 수는 없음.
+- Calendar 클래스 이후, 대부분의 메서드는 Calendar에서 가져오고 Date는 저장 용도로만 사용
+
+## LocalDate, LocalTime, LocalDateTime
+- DateTimeFormatter(java.time.format)
