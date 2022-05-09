@@ -1,12 +1,12 @@
 {
     // Java package Path
-    "java.project.sourcePaths": [
-        "Java/JavaDataType",
-        "Java/JavaExampleCode",
-        "Java/JavaOperator",
-        "Java",
-        "OOP"
-    ],
+    // "java.project.sourcePaths": [
+    //     "Java/JavaDataType",
+    //     "Java/JavaExampleCode",
+    //     "Java/JavaOperator",
+    //     "Java",
+    //     "OOP"
+    // ],
     "pasteImage.path": "${currentFileDir}\\img",
     "java.configuration.updateBuildConfiguration": "automatic"
 }
