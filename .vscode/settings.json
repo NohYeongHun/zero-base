@@ -7,5 +7,6 @@
         "Java",
         "OOP"
     ],
-    "pasteImage.path": "${currentFileDir}\\img"
+    "pasteImage.path": "${currentFileDir}\\img",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
