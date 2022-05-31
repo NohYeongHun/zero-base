@@ -1,6 +1,8 @@
 ## 목차
 - [목표](#본-챕터-목표)
 - [HTTP](#http)
+- [Request/Response](#http-requestresponse)
+- [쿠키/세션](#쿠키cookie와-세션session)
 
 ## 본 챕터 목표
 
@@ -38,3 +40,64 @@
 
 ### 일반적인 HTTP(HyperText Transfer Protocol) 송수신
 ![](img/2022-05-31-11-42-20.png)
+
+## HTTP Request/Response
+
+> HTTP 헤더는 읽을 수 있음(1.1 버전 기준)
+
+- Request
+```
+GET / HTTP/1.1
+Host: www.fun-coding.org
+Connection: keep-alive
+```
+![](img/2022-06-01-05-34-59.png)
+
+
+- Response
+```
+HTTP/1.1 200 OK
+Server: Apache - 웹 서버 정보
+Content-type: text/html - MIME 타입
+Content-length: 107 - HTTP Body 길이
+<html><head></head> - HTML 데이터
+```
+
+![](img/2022-06-01-05-35-45.png)
+
+- HTTP 통신의 하단에는 TCP/IP 통신으로 이루어져 있다.
+![](img/2022-06-01-05-32-15.png)
+
+### 주요 Request Method
+- GET : 정보 읽기(SELECT)
+    - 전달이 필요한 파라미터들은 URL을 통해 전달
+
+![](img/2022-06-01-05-53-48.png)
+
+
+- POST : 정보 입력하기(INSERT)
+    - 전달이 필요한 파라미터들은 HTTP body에 포함되어 전달되므로, 사용자는 직접적인 확인 불가
+
+![](img/2022-06-01-05-56-37.png)
+
+
+- PUT : 정보 수정하기(UPDATE)
+
+- DELETE : 정보 삭제하기(DELETE)
+
+- 웹사이트 접속시는 일반적으로 GET을 통해 HTML을 가져옴
+![](img/2022-06-01-05-58-09.png)
+
+- 주요 HTTP 응답 코드
+![](img/2022-06-01-05-59-22.png)
+
+## 쿠키(Cookie)와 세션(Session)
+- HTTP는 Stateless: 통신이 끝나면 상태를 유지하지 않음
+- 이를 보완하기 위한 기법이 쿠키와 세션
+
+![](img/2022-06-01-06-01-48.png)
+
+### 쿠키(Cookie)와 세션(Session)
+- 쿠키/세션 유효기간
+    - expires 설정이 있으면, 로컬 디스크에 저장 및 유효기간 경과시 삭제
+    - expires 설정이 없으면 메모리에 저장 및 브라우저 종료시 삭제
