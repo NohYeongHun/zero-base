@@ -5,6 +5,7 @@
 - [OSI7Layer](OSI7Layer.md)
 - [TCP/IP모델](TCP%2CIP.md)
 - [UDP](UDP.md)
+- [HTTP](HTTP.md)
 
 ## Network 챕터 목표
 
