@@ -104,7 +104,7 @@
 1. (Server -> Client) FIN(1), ACK(1) ,Seq Num = n
 2. (Client -> Server), ACK(1), Seq Num = 1, Ack Num = n + 1
 3. (Client -> Server), ACK(1), FIN(1), Seq Num = 1, Ack Num = n + 1
-4. (Client -> Server), ACK(1), Seq Num = n + 1
+4. (Server -> Client), ACK(1), Seq Num = n + 1
 
 ### TCP 전송
 - Sequence Number
@@ -175,5 +175,28 @@ MSS = MTU - (IP헤더길이) - (TCP헤더길이)
         - ACK가 도착시 (패킷 전송 성공시) -> CWND = CWND + 1
 
 
-### 정리
+### 질문 정리
+1. TCP의 3-way-handshake와 4-way-handshake 방식의 차이점(간단하게)
+```
+3-way-handshake는 TCP의 연결 설정
+클라이언트와 서버간 데이터가 송수신이 가능한지를 확인하는 절차
+1. 클라이언트가 서버에 데이터 송신이 가능한지를 확인
+2. 서버가 클라이언트에 데이터 수신이 가능한경우 응답
+3. 클라이언트는 응답을 받고 데이터를 수신할 데이터 번호를 보낸다.
+
+4-way-handshake는 TCP의 연결 해제 설정
+1. 서버가 클라이언트에 데이터 수신을 종료할 것이라고 알림.
+2. 클라이언트는 서버에게 수신 데이터 번호(다음 실행 번호)를 보낸다.
+3. 클라이언트는 서버에게 데이터 수신을 종료해도 괜찮다는 확인을 보낸다.
+4. 서버는 확인을 받고 클라이언트에게 송신 데이터 번호를 보낸 뒤 종료한다.
+```
+
+2. TCP와 UDP의 차이점과 장단점
+```
+- TCP : 연결형 프로토콜, 데이터의 전송 순서 보장, 데이터 신뢰성 보장 
+- UDP : 비연결형 프로토콜, TCP보다 전송속도 빠름, 주로 스트리밍/브로드캐스팅 서비스
+
+- UDP는 TCP의 3-way-handshake나 4-way-handshake 같이 데이터의 신뢰성을 보장하는 절차 없이 바로 데이터를 전송한다.(데이터 전송의 효율성이 높다)
+- TCP는 3-way-handshake나 4-way-handshake와 같이 데이터의 신뢰성을 보장하는 절차가 있기 때문에 데이터의 전송 순서와 신뢰성이 보장된다.
+```
 
