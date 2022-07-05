@@ -101,10 +101,10 @@
 
 ![](img/2022-05-31-07-02-13.png)
 
-1. (Server -> Client) FIN(1), ACK(1) ,Seq Num = n
-2. (Client -> Server), ACK(1), Seq Num = 1, Ack Num = n + 1
-3. (Client -> Server), ACK(1), FIN(1), Seq Num = 1, Ack Num = n + 1
-4. (Server -> Client), ACK(1), Seq Num = n + 1
+1. (Client -> Server) FIN(1), ACK(1) ,Seq Num = n
+2. (Server -> Client), ACK(1), Seq Num = 1, Ack Num = n + 1
+3. (Server -> Client), ACK(1), FIN(1), Seq Num = 1, Ack Num = n + 1
+4. (Client -> Server), ACK(1), Seq Num = n + 1
 
 ### TCP 전송
 - Sequence Number
@@ -185,10 +185,10 @@ MSS = MTU - (IP헤더길이) - (TCP헤더길이)
 3. 클라이언트는 응답을 받고 데이터를 수신할 데이터 번호를 보낸다.
 
 4-way-handshake는 TCP의 연결 해제 설정
-1. 서버가 클라이언트에 데이터 수신을 종료할 것이라고 알림.
-2. 클라이언트는 서버에게 수신 데이터 번호(다음 실행 번호)를 보낸다.
-3. 클라이언트는 서버에게 데이터 수신을 종료해도 괜찮다는 확인을 보낸다.
-4. 서버는 확인을 받고 클라이언트에게 송신 데이터 번호를 보낸 뒤 종료한다.
+1. 클라이언트가 서버에 데이터 수신을 종료할 것이라고 알림.
+2. 서버는 클라이언트 에게 수신 데이터 번호(다음 실행 번호)를 보낸다.
+3. 서버는 클라이언트에게 데이터 수신을 종료해도 괜찮다는 확인을 보낸다.
+4. 클라이언트는 확인을 받고 서버에게 송신 데이터 번호를 보낸 뒤 종료한다.
 ```
 
 2. TCP와 UDP의 차이점과 장단점
