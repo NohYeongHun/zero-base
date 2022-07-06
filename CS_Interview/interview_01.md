@@ -92,3 +92,47 @@
 - Heap<br>
     힙 영역은 동적 메모리 할당이 발당하는 구역이다. BSS 구역의 끝에서 시작하여 주소 값이 커지는 방향으로 이동한다. 
     C의 경우에는 malloc, realloc 및 free을 통해 프로그래머가 직접적으로 관리할 수 있다.
+
+## 6. TCP 연결 시에는 3 way handshake고 해제 시에는 4 way handshake인 이유를 설명해주세요.
+
+### TCP 프로토콜에서 사용하는 사전 지식.
+
+- Code Bits
+    - URG : 긴급 데이터
+    - ACK : Ack Number 용 데이터
+    - PSH : 수신측 버퍼가 다 찰때까지 기다리지 않고, 바로 전달 요청
+    - RST : 접속 리셋 요청시 사용
+    - SYN : 연결 요청시 사용
+    - FIN : 연결 종료시 사용
+- Sequence Number : 송신된 데이터의 순서 번호
+- Ack Number : 수신된 데이터 순서번호 + 1(그 다음 데이터를 보내달라는 의미)
+
+### 3 way handshake ( TCP 연결 설정)
+1. Seq Num = 0, SYN(1) ex) (60451(client) = 운영체제 빈 포트 할당 -> 9999(목적지 PORT - server)) 
+    - 클라이언트에서 서버에 데이터를 전송가능한지 SYN Bit를 on 한 뒤 송신
+2. Seq Num = 0, Ack Num = (SeqNum + 1) SYN(1), ACK(1) (Server -> Clielnt)
+    - 서버가 클라이언트에서 수신 받은 뒤 데이터 전송 가능하면 ACK Bit와 SYN Bit를 on 해서 송신
+3. Seq Num = 1, Ack Num = 1, ACK(1) (Client -> Server)
+    - 가능하다는 사인을 클라이언트가 수신한 뒤 데이터 전송을 하겠다고 서버에 다시 송신
+
+```
+TCP 연결설정에서 3 way handshake는 클라이언트와 서버간에 
+양쪽 모두 데이터 전송할 준비가 되었다는 것을 보장하고, 실제로 데이터 전달 실시 전에
+양 쪽 모두 다른 쪽이 준비되었다는 것을 알 수 있도록 한다.
+```
+
+### 4 way handshake ( TCP 연결 해제)
+1. (Client -> Server) FIN(1), ACK(1) ,Seq Num = n
+  - 클라이언트가 서버에 데이터 전송을 종료해도 되는지 물어본다.
+2. (Server -> Client), ACK(1), Seq Num = 1, Ack Num = n + 1
+  - 서버는 클라이언트에게 수신 데이터 번호(다음 실행 번호)를 보낸다.
+3. (Server -> Client), ACK(1), FIN(1), Seq Num = 1, Ack Num = n + 1
+  - 서버는 클라이언트에게 데이터 수신을 종료해도 괜찮다는 확인을 보낸다.
+4. (Client -> Server), ACK(1), Seq Num = n + 1
+  - 클라이언트는 확인을 받고 서버에게 송신 데이터 번호를 보낸 뒤 종료한다.
+
+```
+TCP 연결설정에서 4 way handshake는 클라이언트와 서버간에 
+데이터 송수신을 종료해도 되는지를 확인하고 이를 통해 종료 전에
+양 쪽 모두 다른 쪽이 준비되었다는 것을 확인하고 이를 실시한다.
+```
