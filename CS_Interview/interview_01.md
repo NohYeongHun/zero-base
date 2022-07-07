@@ -211,4 +211,34 @@ Lock이 없는경우 비정상적인 결과
     - 둘 이상의 주기에 공통되는 트랜잭션 선택
 
 
+## 8. 페이지 교체 알고리즘에 대해 아는대로 설명.
 
+### 페이징 시스템(paging system)
+- 페이징(paging) 개념
+    - 크기가 동일한 페이지로 가상 주소 공간과 이에 매칭하는 물리 주소 공간을 관리
+    - 하드웨어 지원이 필요
+    - 예) Intel x86 시스템(32bit)에서는 4KB, 2MB, 1GB 지원
+    리눅스에서는 4KB로 paging
+    페이지 번호를 기반으로 가상 주소/물리 주소 매핑 정보를 기록/사용
+
+- 페이지 교체 알고리즘(FIFO)
+    - 가장 먼저 들어온 페이지를 내리자
+
+- 페이지 교체 알고리즘(OPT)
+    - 최적 페이지 교체 알고리즘(OPTimal Replacement Algorithm)
+    - 앞으로 가장 오랫동안 사용하지 않을 페이지를 내린다.
+
+- 페이지 교체 알고리즘 (LRU)
+    - LRU(Least Recently Used) Page Replacement Algorithm
+    - 가장 오래 전에 사용된 페이지를 교체
+    - OPT 교체 알고리즘이 구현이 불가하므로, 과거 기록을 기반으로 시도
+
+- 페이지스왑알고리즘 (LFU)
+    - LFU(LeastFrequentlyUsed) PageReplacementAlgorithm
+    - 가장적게사용된페이지를내리자
+
+- 페이지 스왑 알고리즘(NUR)
+    - NUR(Not Used Recently) Page Replacement Algorithm
+    - LRU와 마찬가지로 최근에 사용하지 않은 페이지부터 교체하는 기법
+    - 각페이지마다 참조 비트(R), 수정 비트(M)을 둠 (R,M)
+    - (0, 0), (0, 1), (1, 0), (1, 1)순으로 페이지 교체
